@@ -23,7 +23,9 @@ object MainFrameSample extends SimpleSwingApplication {
 
     //val label = new Label
     if (!loadConfig) {
-      throw IllegalAccessError
+      //throw IllegalAccessError
+      Nil
+
     }
 
     contents = app match {
