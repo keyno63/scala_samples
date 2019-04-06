@@ -9,7 +9,7 @@ class IntroPanel extends JPanel {
 
   private val serialVersionUID = 1L
   //private val image = ImageIO.read(new File("src/resource/TanedaRisa.jpg"))
-  private val image = ImageIO.read(new File("src/resource/img/btn2.png"))
+  private val image = ImageIO.read(new File("src/resources/img/btn2.png"))
 
   val imgWidth = image.getWidth()
   val imgHeight = image.getHeight()
