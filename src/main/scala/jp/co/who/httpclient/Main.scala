@@ -16,7 +16,9 @@ object Main {
       val stdin = io.StdIn.readLine().split(" ")
       if (stdin.head != "") {
         //sendRequest(stdin.head)
+        println(stdin)
       } else {
+        println(stdin)
         val str = "%s://%s:%d/%s".format(proto, host, port, entry)
         sendRequest(str)
       }

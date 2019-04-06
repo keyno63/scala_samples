@@ -17,7 +17,7 @@ class HttpSenderImpl extends HttpSender {
   implicit val system: ActorSystem = ActorSystem()
   implicit val materializer: ActorMaterializer = ActorMaterializer()
   implicit val executionContext: ExecutionContext = system.dispatcher
-  val useXML = false;
+  val useXML = false
 
   // request 実装
   @Override
@@ -71,7 +71,9 @@ class HttpSenderImpl extends HttpSender {
           Seq
       }
     } else {
-      req.map(decodeResponse(_)._3).map(println)
+      val ret = req.map(decodeResponse(_))
+      val h = ret.map(_.headers).map(println)
+      val r = ret.map(_.entity).map(println)
       //req.map(decodeResponse(_).headers).map(println)
     }
   }

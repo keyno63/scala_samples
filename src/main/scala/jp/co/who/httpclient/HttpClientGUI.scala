@@ -12,11 +12,8 @@ object HttpClientGUI extends SimpleSwingApplication {
       text = "Send"
     }
 
-    var url = new TextField("")
-    //var hoge = new TextField("")
-    val body = new Label {
-      text = ""
-    }
+    var url = new TextField
+    val body = new Label
     var data = ""
 
     contents = new BoxPanel(Orientation.Vertical) {
