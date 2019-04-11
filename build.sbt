@@ -1,5 +1,3 @@
-import sbtassembly.AssemblyKeys.assemblyJarName
-
 val pname = "scala_test"
 val pversion = "0.1.0"
 
@@ -20,4 +18,4 @@ libraryDependencies += "org.scala-lang.modules" % "scala-swing_2.12" % "2.0.1"
 
 libraryDependencies += "net.ruippeixotog" %% "scala-scraper" % "2.1.0"
 
-assemblyJarName <<= (version) map (version => s"hogehoge-$version.jar")
+assemblyJarName := { s"$pname-$pversion.jar" }
