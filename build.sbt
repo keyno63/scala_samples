@@ -1,3 +1,5 @@
+import sbtassembly.AssemblyKeys._
+
 val pname = "scala_test"
 val pversion = "0.1.0"
 
