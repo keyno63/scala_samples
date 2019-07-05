@@ -1,4 +1,4 @@
-package jp.co.who.httpclient
+package jp.co.who.httpclient.akka
 
 import akka.http.scaladsl.model.HttpResponse
 

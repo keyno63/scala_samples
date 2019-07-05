@@ -1,7 +1,7 @@
-package jp.co.who.httpclient
+package jp.co.who.httpclient.akka
 
 import scala.swing.event.{ButtonClicked, EditDone}
-import swing._
+import scala.swing.{BoxPanel, Button, Dialog, Dimension, Label, MainFrame, Orientation, SimpleSwingApplication, TextField}
 
 object HttpClientGUI extends SimpleSwingApplication {
 
