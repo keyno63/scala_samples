@@ -10,5 +10,9 @@ object Main extends App {
   println(res)
 
   //val response = HTTP.post("http://example.com/", "foo" -> "bar")
-  val response = HTTP.get("http://example.com/", "foo" -> "bar")
+  val response = HTTP.get(url, "param1" -> "bar")
+  println(response)
+
+  val postRes = req.Post(url = url, Map.empty, requestBody = "param1=bar")
+  println(postRes)
 }

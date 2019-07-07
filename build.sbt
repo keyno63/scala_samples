@@ -12,11 +12,17 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.8",
 
   // swing
-  "org.scala-lang.modules" % "scala-swing_2.12" % "2.0.1", 
+  "org.scala-lang.modules" %% "scala-swing_2.12" % "2.0.1", 
   "net.ruippeixotog" %% "scala-scraper" % "2.1.0",
   
   // skinny
   "org.skinny-framework" %% "skinny-http-client" % "3.0.1",
-  "org.slf4j" % "slf4j-log4j12" % "1.7.26" % Test,
-  "log4j" % "log4j" % "1.2.17"
+  "log4j" %% "log4j",
+  "org.slf4j" %% "slf4j-log4j12",
+ 
+  
+  // log
+  "com.typesafe.scala-logging" %% "scala-logging",
+  "ch.qos.logback" %% "logback-classic"
+  
 )
