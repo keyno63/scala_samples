@@ -40,36 +40,47 @@ class CustomSkinny {
 }
 
 object CustomSkinny {
+
   @Override
   def main(args: Array[String]): Unit = {
 
-    val url = "http://192.168.1.148:8080/api/param"
-    var map = Map.empty[String, String]
-    map += "param1" -> "fuga"
-    map += "param2" -> "fuga1"
-    //get(map)
-    val cs = new CustomSkinny
-    println(cs.post(url, map))
-    perf()
+    // read config
+    val p = new java.util.Properties()
+    p.load(new java.io.FileInputStream("src/resources/http/conf.properties"))
+    val url1 = p.getProperty("url")
+    perf(url1)
   }
 
-  def perf(): Unit = {
+  private def post(): Unit = {
     val url = "http://192.168.1.148:8080/api/param"
+    var map = Map(
+      "param1" -> "fuga",
+      "param2" -> "fuga1"
+    )
+    val cs = new CustomSkinny
+    println(cs.post(url, map))
+
+  }
+
+  private def perf(url: String): Unit = {
     val request = Request(url)
-    var map = Map.empty[String, String]
-    map += "param1" -> "fuga"
-    map += "param2" -> "fuga1"
+    var map = Map(
+      "param1" -> "fuga",
+      "param2" -> "fuga1"
+    )
     val b = map.map(item => s"${item._1}=${item._2}").mkString("&")
     /*
     for (x <- 0 until 100)
     {
       val response = HTTP.post(request.body(b.getBytes()))
       println(response.status, response.textBody)
+      Thread.sleep(500)
     }
     */
-    (0 to 100).foreach{
+    (0 to 100).foreach{ i =>
       val response = HTTP.post(request.body(b.getBytes()))
-      println(_, response.status, response.textBody)
+      Thread.sleep(500)
+      println(i, response.status, response.textBody)
     }
 
   }
