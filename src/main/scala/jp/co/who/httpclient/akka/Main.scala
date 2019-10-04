@@ -13,7 +13,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     while (true) {
       printf("scalahttp> ")
-      val stdin = io.StdIn.readLine().split(" ")
+      val stdin = scala.io.StdIn.readLine().split(" ")
       if (stdin.head != "") {
         //sendRequest(stdin.head)
         println(stdin)
