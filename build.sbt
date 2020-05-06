@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.8",
 
   // swing
-  "org.scala-lang.modules" % "scala-swing_2.12" % "2.0.1",
+  "org.scala-lang.modules" %% "scala-swing" % "2.0.1",
   "net.ruippeixotog" %% "scala-scraper" % "2.1.0",
 
   // skinny
@@ -28,4 +28,3 @@ libraryDependencies ++= Seq(
 ).map(_ % circeVersion)
 
 val circeVersion = "0.9.3"
-
