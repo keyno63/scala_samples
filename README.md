@@ -1,5 +1,10 @@
 # scala_samples
 
+[![Build Status][Badge-Circle]][Link-Circle]
+
+[Link-Circle]: https://circleci.com/gh/keyno63/scala_samples "circleci"
+[Badge-Circle]: https://circleci.com/gh/keyno63/scala_samples.svg?style=svg "circleci"
+
 ## OverView
 
 Sandbox Repository for implementation to Scala for me.
