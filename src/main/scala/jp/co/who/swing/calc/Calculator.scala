@@ -1,5 +1,7 @@
 package jp.co.who.swing.calc
 
+import scala.language.postfixOps
+
 object Calculator {
   def calculate(formula: String): String = {
     val tmpStack = new scala.collection.mutable.Stack[String]

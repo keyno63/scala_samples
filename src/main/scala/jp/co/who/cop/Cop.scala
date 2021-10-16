@@ -1,8 +1,6 @@
 package jp.co.who.cop
 
 import jp.co.who.Sample
-import jp.co.who.cop.C17
-import jp.co.who.cop.C18
 
 object Cop extends App {
   Console.println("Hello World: " + (args mkString ", "))
