@@ -23,7 +23,9 @@ sbt run
 
 ### test
 
-Not Yet.
+```shell
+sbt test
+```
 
 ## License
 
