@@ -25,6 +25,7 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-core",
   "io.circe" %% "circe-generic",
   "io.circe" %% "circe-parser"
-).map(_ % circeVersion)
+).map(_ % circeVersion) ++
+  Seq("org.scalatest" %% "scalatest" % "3.2.9" % "test")
 
 val circeVersion = "0.9.3"
