@@ -4,12 +4,34 @@ on: [push, pull_request]
 
 jobs:
   build:
+    timeout-minutes: 10
+    strategy:
+      fail-fast: true
+      matrix:
+        java: [ '16' ]
+        scala: [ '2.13.4' ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup JDL
+      - name: Setup JDK
         uses: olafurpg/setup-scala@v11
       - name: Cache SBT
         uses: coursier/cache-action@v3
+        with:
+          extraKey: scala-${{ matrix.scala }}
       - name: check compile
-        run: sbt compile test
+        run: sbt compile
+  test:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup JDK
+        uses: olafurpg/setup-scala@v11
+      - name: Cache SBT
+        uses: coursier/cache-action@v3
+        with:
+          extraKey: scala-${{ matrix.scala }}
+      - name: check compile
+        run: sbt test
