@@ -1,0 +1,15 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup JDL
+        uses: olafurpg/setup-scala@v11
+      - name: Cache SBT
+        uses: coursier/cache-action@v3
+      - name: check compile
+        run: sbt compile test
