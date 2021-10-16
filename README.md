@@ -1,6 +1,7 @@
 # scala_samples
 
 [![Build Status][Badge-Circle]][Link-Circle]
+[![Build](https://github.com/keyno63/scala_samples/actions/workflows/build.yml/badge.svg)](https://github.com/keyno63/scala_samples/actions/workflows/build.yml)
 
 [Link-Circle]: https://circleci.com/gh/keyno63/scala_samples "circleci"
 [Badge-Circle]: https://circleci.com/gh/keyno63/scala_samples.svg?style=svg "circleci"
